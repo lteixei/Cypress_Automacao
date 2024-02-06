@@ -1,0 +1,32 @@
+const sqlServer =
+required('cypress-sql-server');
+
+module.exports = 
+defineConfig({
+  e2e: {
+
+    setupNodeEvents(on,
+    config) {
+    
+      // implement
+
+      tasks = sqlServer.loadDB Plugin(config.db);
+
+      on('task', tasks);
+    },"emv": {
+      "db": {
+        "host": 
+        "userName": "SYSADM",
+        "password":  "IX1bscs$.",
+        "server":  "snelnxm83",
+        "port": "1525",
+        "url": "jdbc:oracle:thin:@",
+      "options": {
+        "database":  "BSCSIXFQA1",
+        "encrypt": true,
+        "rowCollection
+        OnRequestComplection": true
+      }
+    },
+  },
+});

@@ -1,0 +1,6 @@
+{
+    "chromewebSecurity": false,
+    "$schema": "ioceso",
+    "projectId": true,
+    "experimentalStudio": true,
+}

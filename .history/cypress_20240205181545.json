@@ -1,0 +1,14 @@
+{
+    "chromewebSecurity": false,
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "projectId": "ioceso",
+    "experimentalStudio": true,
+    "screenshotOnRunFailure": true,
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir":
+        "charts":
+        "reportPageTitle": Joan Media Demo Report",
+        "embeddedScreenshots": true
+    }
+}

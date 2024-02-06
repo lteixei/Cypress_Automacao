@@ -1,0 +1,5 @@
+const sqlServer =
+required('cypress-sql-server');
+
+module.exports = 
+defineConfig()

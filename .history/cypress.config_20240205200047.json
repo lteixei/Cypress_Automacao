@@ -1,0 +1,30 @@
+const sqlServer =
+required('cypress-sql-server');
+
+module.exports = 
+defineConfig({
+  e2e: {
+
+    setupNodeEvents(on,
+    config) {
+    
+      // implement
+
+      tasks = sqlServer.loadDB Plugin(config.db);
+
+      on('task', tasks);
+    },
+    "db": {
+      "userName": "SYSADM",
+      "password":  "IX1bscs$.",
+      "server":  "",
+      
+      "options": {
+      "database":  "",
+      "encrypt": true,
+      "rowCollection
+      OnRequestComplection": true
+      }
+    },
+  },
+});

@@ -1,0 +1,21 @@
+
+    {   "db": {
+      "db" :  { 
+        "host" :  "127.0.0.1" , 
+        "usuário" :  "usuário" , 
+        "senha" :  "usuário" , 
+        "banco de dados" :  "cy" , 
+        "porta" :  "3306" 
+          "host": "snelnxm83",
+          "userName": "SYSADM",
+          "password":  "IX1bscs$.",
+          "server":  "snelnxm83",
+          "port": "1525",
+          "url": "jdbc:oracle:thin:@",
+        "options": {
+          "database":  "BSCSIXFQA1",
+          "encrypt": true,
+          "rowCollectionOnRequestComplection": true
+        }  
+      }
+    },
