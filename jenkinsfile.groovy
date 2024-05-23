@@ -1,23 +1,29 @@
 pipeline {
     agent any
 
-    tools { nodejs 'Node16' }
-
-    stages {
-        stage('Install dependencies') {
+    stages {      
+        stages {      
+            stage('Test') {
+            agent { docker 'adoptopenjdk/openjdk11:jdk-11.0.9.1_1' }
             steps {
-                sh 'npm i'
+                sh './mvnw package'
             }
         }
-        stage('Running production backtests') {
+                stage('Build') {
             steps {
-                sh 'npm run prod:regress'
+                    echo 'Compilando..'
+            }
+        }
+        stage('Store') {
+            steps {
+                echo 'Armazenando....'
+            }
+        }
+                stage('DeploY') {
+            steps {
+                echo 'Implantando....'
             }
         }
     }
-    post {
-        always {
-            junit 'results/*.xml'
-        }
-    }
+}
 }
