@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-09-26T13:06:58" tests="0" file="cypress\e2e\1-getting-started\teste.cy.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Livraria da Travessa" timestamp="2024-09-26T13:06:58" tests="1" failures="1" time="0">
+    <testcase name="Livraria da Travessa Novo Usuário" time="0" classname="Novo Usuário">
+      <failure message="The following error originated from your application code, not from Cypress.
+
+  &gt; $(...).inputmask is not a function
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application" type="TypeError"><![CDATA[TypeError: The following error originated from your application code, not from Cypress.
+
+  > $(...).inputmask is not a function
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application
+    at <unknown> (https://www.travessa.com.br/scripts.js?v=58:379:18)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

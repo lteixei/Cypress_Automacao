@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-09-26T13:22:51" tests="0" file="cypress\e2e\1-getting-started\Web_Shop\gifts_cards_web_shop.cy.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="DEMO WEB SHOP" timestamp="2024-09-26T13:22:51" tests="1" failures="1" time="0">
+    <testcase name="DEMO WEB SHOP FAZER LOGIN" time="0" classname="FAZER LOGIN">
+      <failure message="Timed out retrying after 4000ms: Expected to find content: &apos;Your Shopping Cart is empty!&apos; but never did." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your Shopping Cart is empty!' but never did.
+    at Context.eval (webpack://Cypress_Automacao/./cypress/e2e/1-getting-started/Web_Shop/gifts_cards_web_shop.cy.js:105:44)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
