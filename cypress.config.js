@@ -1,3 +1,4 @@
+require('ts-node/register'); // Adicione isso no início do seu cypress.config.ts
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
@@ -10,4 +11,3 @@ module.exports = defineConfig({
     toConsole: true,
   },
 });
-
