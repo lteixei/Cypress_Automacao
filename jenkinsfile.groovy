@@ -3,27 +3,25 @@ pipeline {
 
     stages {      
         stages {      
-            stage('Test') {
-            agent { docker 'adoptopenjdk/openjdk11:jdk-11.0.9.1_1' }
-            steps {
-                sh './mvnw package'
+            stage('Checkout  SCM') {
+            git https://github.com/lteixei/Selenium_Java
+            }
+           
+            stage('Build') {
+            dir("comtest") {
+                    sh "instalação limpa do mvn"
+                }
             }
         }
-                stage('Build') {
-            steps {
-                    echo 'Compilando..'
-            }
-        }
-        stage('Store') {
+            stage('Store') {
             steps {
                 echo 'Armazenando....'
             }
         }
-                stage('DeploY') {
+            stage('DeploY') {
             steps {
-                echo 'Implantando....'
+                sh "mvn test -Dtest=CY0000_Login_Test"
             }
         }
     }
-}
 }
