@@ -5,6 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open"
+    
+    "scripts": {
+    "clean-config": "del cypress.config.js && del cypress.config.ts",
+    "test": "npm run clean-config && npx cypress run"
+}
+
   },
   "keywords": [],
   "author": "",
