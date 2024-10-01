@@ -8,6 +8,11 @@
     "clean-config": "del cypress.config.js && del cypress.config.ts",
     "run-tests": "npm run clean-config && npx cypress run"
   },
+  
+    "scripts": {
+      "start": "node app.js" // ou o comando apropriado para iniciar seu servidor
+  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
