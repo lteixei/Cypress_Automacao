@@ -33,6 +33,7 @@ cy.contains('LLTEI@GMAIL.COM').should('be.visible')
 //
 //
 //TENIS VERDE
+cy.get('.top-menu > :nth-child(4) > a').click()
 cy.get(':nth-child(8) > .product-item > .picture > a > img').click()
 cy.wait(2000) // wait for 2 seconds
 cy.get('.compare-products > .button-2').click()
@@ -92,7 +93,7 @@ cy.wait(2000) // wait for 2 seconds
 //
 //TENIS
 cy.get(':nth-child(2) > .product-item > .picture > a > img').click()
-cy.get('#product_attribute_28_7_10').click()
+//cy.get('#product_attribute_28_7_10').click()
 cy.get('.selected-value > label > .color-container > .color').click()
 cy.wait(2000) // wait for 2 seconds
 cy.get('#add-to-cart-button-28').click().click()
@@ -127,7 +128,7 @@ cy.get(':nth-child(1) > .remove-from-cart > input').click()
 cy.get(':nth-child(2) > .remove-from-cart > input').click()
 cy.get(':nth-child(3) > .remove-from-cart > input').click()
 cy.get(':nth-child(4) > .remove-from-cart > input').click()
-cy.get(':nth-child(5) > .remove-from-cart > input').click()
+//cy.get(':nth-child(5) > .remove-from-cart > input').click()
 cy.get('.update-cart-button').click()
 //
 //
