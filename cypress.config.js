@@ -6,4 +6,13 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  {
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "cypress/reports/mocha"
+    },
+    "env": {
+      "allure": true
+    }
+  }
 });

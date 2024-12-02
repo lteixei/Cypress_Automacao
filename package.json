@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
-    "test": "npm run cypress-open"
+    "test": "npm run cypress-open",
+    "test": "cypress run",
+    "posttest": "allure generate cypress/reports/mocha --clean -o cypress/reports/allure && allure open cypress/reports/allure"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
