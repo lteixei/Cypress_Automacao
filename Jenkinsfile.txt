@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    tools { nodejs 'Node16' }
+
+    stages {
+        stage('Install dependencies') {
+            steps {
+                sh 'npm i'
+            }
+        }
+        stage('Running production backtests') {
+            steps {
+                sh 'npm run prod:regress'
+            }
+        }
+        stage('Running Automation') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
+    }
+    post {
+        always {
+            junit 'results/*.xml'
+        }
+    }
+}
