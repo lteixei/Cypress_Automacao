@@ -6,6 +6,9 @@
   "scripts": {
     "test": "npx cypress open"
   },
+  "scripts": {
+  "test": "cypress run && allure generate"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "cy:open": "cypress open",
     "cypress-iframe": "^1.0.1"
   },
+  
   "dependencies": {
     "abab": "^2.0.6",
     "abbrev": "^1.1.1",
