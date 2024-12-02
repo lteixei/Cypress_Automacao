@@ -1,28 +1,22 @@
 pipeline {
-    agent any
-
-    tools { nodejs 'Node23' }
-
-    stages {
-        stage('Install dependencies') {
-            steps {
-                sh 'npm ci --prefer-offline'
-            }
-        }
-        stage('Running production backtests') {
-            steps {
-                sh 'npm install'
-            }
-        }
-        stage('Running Automation') {
-            steps {
-                sh 'npx cypress run' or 'npm run cy:run:e2e'
-            }
-        }
-    }
-    post {
-        always {
-            junit 'results/*.xml'
-        }
-    }
+  agent any
+  tools {nodejs "Node"}
+  stages {
+      stage('Dependencies') {
+          steps {
+              sh 'npm i'
+              sh 'npm install lambdatest-cypress-cli'
+          }
+      }
+      stage('e2e Tests') {
+          steps {
+              sh 'npx cypress run:lambda'
+          }
+      }
+      stage('Deploy') {
+          steps {
+              echo 'Deploying....'
+          }
+      }
+  }
 }
