@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/3d374fe2-a246-4ec6-a56e-fb5183c0b122)
 # Estrutra de projeto utilizando Cypress com Cucumber
 # Para configurar o Ambiente:
 
