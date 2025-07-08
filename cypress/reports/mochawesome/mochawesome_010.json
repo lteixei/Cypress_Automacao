@@ -1,0 +1,425 @@
+{
+  "stats": {
+    "suites": 9,
+    "tests": 9,
+    "passes": 7,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-07-08T14:01:36.651Z",
+    "end": "2025-07-08T14:12:24.993Z",
+    "duration": 648342,
+    "testsRegistered": 9,
+    "passPercent": 77.77777777777779,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae990175-17a8-4956-9227-ca81aa6b94b4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Web_Shop\\completo_web_shop.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Web_Shop\\completo_web_shop.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1cc5d512-e99c-472f-b98e-39a49cef70c2",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "FAZER LOGIN",
+              "fullTitle": "DEMO WEB SHOP FAZER LOGIN",
+              "timedOut": null,
+              "duration": 8414,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//MENU NOVO REGISTRO\n//cy.get('.ico-register').click()\n//\n//cy.get('#gender-male').click()\n//cy.get('#FirstName').type('LEONARDO')\n//cy.get('#LastName').type('TEIXEIRA')\n//cy.get('#Email').type('LLTEI@GMAIL.COM')\n//\n//cy.get('#Password').type('123456')\n//cy.get('#ConfirmPassword').type('123456')\n//\n//cy.get('#register-button').click()\n//cy.contains('Your registration completed').should('be.visible')\n//LOGIN \ncy.get('.ico-login').click();\n//\ncy.get('#Email').type('LLTEI@GMAIL.COM');\ncy.get('#Password').type('123456');\ncy.get('#RememberMe').click();\n//\ncy.get('form > .buttons > .button-1').click();\ncy.contains('LLTEI@GMAIL.COM').should('be.visible');\n//\n//",
+              "err": {},
+              "uuid": "269eb895-a640-4dad-abdb-4f20cec07d10",
+              "parentUUID": "1cc5d512-e99c-472f-b98e-39a49cef70c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "269eb895-a640-4dad-abdb-4f20cec07d10"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8414,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f48ccdef-e242-4893-b797-eeb7a8425e3b",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GIFT",
+              "fullTitle": "DEMO WEB SHOP GIFT",
+              "timedOut": null,
+              "duration": 77184,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//\n//LOGIN \ncy.get('.ico-login').click();\n//\ncy.get('#Email').type('LLTEI@GMAIL.COM');\ncy.get('#Password').type('123456');\ncy.get('#RememberMe').click();\n//\ncy.get('form > .buttons > .button-1').click();\ncy.contains('LLTEI@GMAIL.COM').should('be.visible');\n//\n//\n//\n//\n// 1 PRESENTE - GIFTS\ncy.get('.top-menu > :nth-child(7) > a').click();\n//\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\n//RECIPIENTE NAME\ncy.get('#giftcard_1_RecipientName').type('Andre');\n//RECIPIENTE EMAIL\ncy.get('#giftcard_1_RecipientEmail').type('andre@hotmail.com');\n//cy.get('#giftcard_1_SenderName').type('Leonaardo')\n//\n//MESSAGE\ncy.get('#giftcard_1_Message').type('Oi');\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-1').click();\ncy.wait(4000); // wait for 2 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\n//\n//\n//\n// 2 PRESENTE - GIFTS\ncy.get(':nth-child(2) > .product-item > .picture > a > img').click();\ncy.wait(4000); // wait for 2 seconds\n//RECIPIENTE NAME\ncy.get('#giftcard_2_RecipientName').type('Andre');\n//RECIPIENTE EMAIL\ncy.get('#giftcard_2_RecipientEmail').type('andre@hotmail.com');\n//\n//MESSAGE\ncy.get('#giftcard_2_Message').type('Oi');\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(4000); // wait for 2 seconds\n//\n//\n//\n// 3 PRESENTE - GIFTS\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(4000); // wait for 2 seconds\n//RECIPIENTE NAME\ncy.get('#giftcard_3_RecipientName').type('Andre');\ncy.wait(2000); // wait for 2 seconds\n//\n//\n//MESSAGE\ncy.get('#giftcard_3_Message').type('Oi');\ncy.wait(3000); // wait for 3 seconds\ncy.get('#add-to-cart-button-3').click();\ncy.wait(5000); // wait for 5 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(4000); // wait for 2 seconds\n//\n//\n//\n// 4 PRESENTE\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.wait(4000); // wait for 2 seconds\n//RECIPIENTE NAME\ncy.get('#giftcard_4_RecipientName').type('Andre');\n//\n//\n//MESSAGE\ncy.get('#giftcard_4_Message').type('Oi');\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-4').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click(); //\ncy.get(':nth-child(2) > .remove-from-cart > input').click();\ncy.get(':nth-child(3) > .remove-from-cart > input').click();\ncy.get(':nth-child(4) > .remove-from-cart > input').click();\ncy.get('.update-cart-button').click();\n//\n// VERIFICAR MENSAGEM DE CARRINHO VAZIO\ncy.contains('Your Shopping Cart is empty!').should('be.visible');\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//\n//HOME\ncy.get('.header-logo > a > img').click();\n//",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your Shopping Cart is empty!' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your Shopping Cart is empty!' but never did.\n    at Context.eval (webpack://cypress_project/./cypress/e2e/1-getting-started/Web_Shop/completo_web_shop.cy.js:136:44)",
+                "diff": null
+              },
+              "uuid": "f32506e5-0c54-44b8-890b-bb868ba7d7db",
+              "parentUUID": "f48ccdef-e242-4893-b797-eeb7a8425e3b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f32506e5-0c54-44b8-890b-bb868ba7d7db"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 77184,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "705f6686-0ebf-42db-b109-5309dd48be43",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "BOOKS_WEB",
+              "fullTitle": "DEMO WEB SHOP BOOKS_WEB",
+              "timedOut": null,
+              "duration": 74963,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//BOOKS -1\ncy.get('.top-menu > :nth-child(1)').click();\n//\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.get('#add-to-cart-button-13').click();\ncy.wait(4000); // wait for 2 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//BOOKS -12\ncy.get(':nth-child(2) > .product-item > .picture > a > img').click();\ncy.wait(3000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(3000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(1) > a').click();\n//\n//BOOKS -3\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(3000); // wait for 2 seconds\ncy.get('#add-to-cart-button-45').click();\ncy.wait(4000); // wait for 2 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\n//\n//BOOKS -4\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(1) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//BOOKS -5\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-22').click();\ncy.wait(4000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(1) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//BOOKS -6\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(4000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(1) > a');\n//\n//\ncy.get('.ico-cart > .cart-label').click();\n//\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\ncy.get(':nth-child(2) > .remove-from-cart > input').click();\ncy.get(':nth-child(3) > .remove-from-cart > input').click();\ncy.get('.update-cart-button').click();\n//\n//\n// VERIFICAR MENSAGEM DE CARRINHO VAZIO\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Your Shopping Cart is empty!').should('be.visible');\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('You have no items to compare.').should('be.visible');\n//\n//HOME\ncy.get('.header-logo > a > img').click();\n//",
+              "err": {},
+              "uuid": "5b5154d6-d6a7-40a8-b162-10b21bed5623",
+              "parentUUID": "705f6686-0ebf-42db-b109-5309dd48be43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5b5154d6-d6a7-40a8-b162-10b21bed5623"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 74963,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e7083a90-2714-41de-a17e-06691d725a51",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "COMPUTERS_WEB",
+              "fullTitle": "DEMO WEB SHOP COMPUTERS_WEB",
+              "timedOut": null,
+              "duration": 135325,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//COMPUTERS\ncy.get('.top-menu > :nth-child(2) > [href=\"/computers\"]').click();\n//\n//\n//NOTEBOOK\ncy.get('.top-menu > :nth-child(2)').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(2) > .sub-category-item > .picture').click();\ncy.get('.product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-31').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\n//DESKTOP\ncy.get(':nth-child(1) > .sub-category-item > .picture > a > img').click();\n//\n//DESK - 1\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 1 seconds\ncy.get(':nth-child(2) > .option-list > :nth-child(1)').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#product_attribute_72_6_19_91').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#product_attribute_72_3_20_58').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#product_attribute_72_8_30_94').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-72').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//DESK - 2\ncy.get(':nth-child(2) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#product_attribute_16_3_6_18').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#product_attribute_16_4_7_21').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#product_attribute_16_8_8_24').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-16').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\ncy.wait(1000); // wait for 1 seconds\n//\n//DESK - 3\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-74').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\ncy.wait(1000); // wait for 1 seconds\n//\n//DESK - 4\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(2) > [href=\"/computers\"]').click();\ncy.wait(1000); // wait for 1 seconds\n//\n//DESK - 5\ncy.get(':nth-child(1) > .sub-category-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(2) > [href=\"/computers\"]').click();\ncy.wait(1000); // wait for 1 seconds\n//\n//DESK - 6\ncy.get(':nth-child(1) > .sub-category-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(6) > .product-item > .picture > a > img').click();\ncy.get('#add-to-cart-button-75').click();\ncy.wait(1000); // wait for 1 seconds\n//cy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click()\n//\ncy.get('.ico-cart > .cart-label').click();\n//\n//ACESSORIOS\ncy.get('.top-menu > :nth-child(2)').click();\n//\n//ACESS - 1\ncy.get(':nth-child(3) > .sub-category-item > .picture').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\n//\n//ACESS - 2\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-63').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//ACESS - 3\ncy.get(':nth-child(2) > .product-item > .picture > a > img').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-66').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//ACESS - 4\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-65').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//ACESS - 5\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-62').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//ACESS - 6\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-64').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//ACESS - 7\ncy.get(':nth-child(6) > .product-item > .picture > a > img').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-61').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\n//ACESS - 8\ncy.get(':nth-child(7) > .product-item > .picture > a > img').click();\ncy.wait(1000); // wait for 1 seconds\ncy.get('#add-to-cart-button-67').click();\ncy.wait(1000); // wait for 1 seconds\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\ncy.get(':nth-child(2) > .remove-from-cart > input').click();\ncy.get(':nth-child(3) > .remove-from-cart > input').click();\ncy.get(':nth-child(4) > .remove-from-cart > input').click();\ncy.get(':nth-child(5) > .remove-from-cart > input').click();\ncy.get(':nth-child(6) > .remove-from-cart > input').click();\ncy.get(':nth-child(7) > .remove-from-cart > input').click();\ncy.get(':nth-child(8) > .remove-from-cart > input').click();\ncy.get(':nth-child(9) > .remove-from-cart > input').click();\ncy.get(':nth-child(10) > .remove-from-cart > input').click();\ncy.get('.update-cart-button').click();\n//\n//\n// VERIFICAR MENSAGEM DE CARRINHO VAZIO\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Your Shopping Cart is empty!').should('be.visible');\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('You have no items to compare.').should('be.visible');\n//\n//HOME\ncy.get('.header-logo > a > img').click();\n//",
+              "err": {},
+              "uuid": "62b58cee-2c53-41d4-befc-cfbd1bfbbc75",
+              "parentUUID": "e7083a90-2714-41de-a17e-06691d725a51",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "62b58cee-2c53-41d4-befc-cfbd1bfbbc75"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 135325,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "90414846-c607-4e05-9e01-85bc01fe27df",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ELETRONICS_WEB",
+              "fullTitle": "DEMO WEB SHOP ELETRONICS_WEB",
+              "timedOut": null,
+              "duration": 48783,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//\n//ELETRONICS - CAMERAS E FOTOS\n//\n//\ncy.get('.top-menu > :nth-child(3)').click();\n//\ncy.get(':nth-child(1) > .sub-category-item').click();\n//\ncy.get(':nth-child(1) > .product-item > .picture').click();\ncy.get('.compare-products > .button-2').click();\ncy.get('.top-menu > :nth-child(3) > [href=\"/electronics\"]').click();\ncy.get(':nth-child(1) > .sub-category-item > .picture > a > img').click();\n//\ncy.get(':nth-child(2) > .product-item > .picture').click();\ncy.get('.compare-products > .button-2').click();\ncy.get('.top-menu > :nth-child(3) > [href=\"/electronics\"]').click();\ncy.get(':nth-child(1) > .sub-category-item > .picture > a > img').click();\n//\n//\ncy.get(':nth-child(3) > .product-item > .picture').click();\ncy.get('.compare-products > .button-2').click();\ncy.get('.top-menu > :nth-child(3) > [href=\"/electronics\"]').click();\ncy.get(':nth-child(1) > .sub-category-item > .picture > a > img').click();\n//\n//\ncy.get(':nth-child(4) > .product-item > .picture').click();\ncy.get('.compare-products > .button-2').click();\n//\ncy.get('.customer-service > ul > :nth-child(5)').click();\n//\n//\n//ELETRONICS - CELL PHONES\n//\ncy.get('.top-menu > :nth-child(3)').click();\n//\ncy.get(':nth-child(2) > .sub-category-item > .picture > a > img').click();\n//\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-43').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(3) > [itemscope=\"\"] > a > span').click();\n//\ncy.get(':nth-child(2) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(3) > [href=\"/electronics\"]').click();\ncy.get(':nth-child(2) > .sub-category-item > .picture').click();\n//\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.get('[href=\"https://demowebshop.tricentis.com/content/images/thumbs/0000213_phone-cover.png\"] > img').click();\ncy.get('.mfp-close').click();\ncy.get('#add-to-cart-button-80').click();\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\ncy.get(':nth-child(2) > .remove-from-cart > input').click();\ncy.get('.update-cart-button').click();\n//\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\n//\n//HOME\ncy.get('.header-logo > a > img').click();\n//",
+              "err": {},
+              "uuid": "897cf457-ebe4-4dfb-9561-48af21c01b2d",
+              "parentUUID": "90414846-c607-4e05-9e01-85bc01fe27df",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "897cf457-ebe4-4dfb-9561-48af21c01b2d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48783,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3d2557b8-6a98-45d2-bc56-d83059de27dd",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "APPAREL_&_SHOES_WEB",
+              "fullTitle": "DEMO WEB SHOP APPAREL_&_SHOES_WEB",
+              "timedOut": null,
+              "duration": 101367,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//CRIANDO SCRIPT PARA LIMPAR CARRINHO DE COMPRA\n//cy.get('.ico-cart > .cart-label').click()\n//cy.get('.cart-header-row > :nth-child(1)').click()\n//.should('Shopping cart')\n//\n//\n//ESCOLHER_ROUPAS\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.contains('Apparel & Shoes').should('be.visible');\n//\n//TENIS VERDE\ncy.get(':nth-child(8) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//BOLSA / MOCHILA\ncy.get(':nth-child(7) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-29').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//BERMUDA JEANS\ncy.get(':nth-child(6) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//BLUSA BRANCA\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//CINTO DE CALÇA\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.get('#add-to-cart-button-40').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//CALÇA JEANS\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-36').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//TENIS\ncy.get(':nth-child(2) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\n//cy.get('#product_attribute_28_7_10').click()\n//cy.wait(2000) // wait for 2 seconds\ncy.get('.selected-value > label > .color-container > .color').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-28').click().click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Apparel & Shoes').should('be.visible');\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n///VESTIDO\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.get('#add-to-cart-button-5').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(4) > a').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.ico-cart > .cart-label').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\ncy.get(':nth-child(2) > .remove-from-cart > input').click();\ncy.get(':nth-child(3) > .remove-from-cart > input').click();\ncy.get(':nth-child(4) > .remove-from-cart > input').click();\ncy.get(':nth-child(5) > .remove-from-cart > input').click();\ncy.get('.update-cart-button').click();\n//\n//\n// VERIFICAR MENSAGEM DE CARRINHO VAZIO\ncy.wait(2000); // wait for 2 seconds\ncy.contains('Your Shopping Cart is empty!').should('be.visible');\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('You have no items to compare.').should('be.visible');\n//\n//HOME\ncy.get('.header-logo > a > img').click();\n//",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(5) > .remove-from-cart > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(5) > .remove-from-cart > input`, but never found it.\n    at Context.eval (webpack://cypress_project/./cypress/e2e/1-getting-started/Web_Shop/completo_web_shop.cy.js:617:3)",
+                "diff": null
+              },
+              "uuid": "97e7bb12-ac22-4187-a5f6-5e7355e2d639",
+              "parentUUID": "3d2557b8-6a98-45d2-bc56-d83059de27dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "97e7bb12-ac22-4187-a5f6-5e7355e2d639"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 101367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9bb771bc-c187-4b77-b36f-3ecf0cf344b0",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "DIGITAL_DOWNLOADS_WEB",
+              "fullTitle": "DEMO WEB SHOP DIGITAL_DOWNLOADS_WEB",
+              "timedOut": null,
+              "duration": 34917,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//DOWNLOADS - DIGITAIS\ncy.get('.top-menu > :nth-child(5)').click();\n//\ncy.get(':nth-child(1) > .product-item > .picture').click();\ncy.get('#add-to-cart-button-53').click();\ncy.wait(500); // wait for 2 seconds\ncy.get('#add-to-cart-button-53').click();\ncy.wait(4000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\n//\ncy.get(':nth-child(2) > .product-item > .picture').click();\ncy.get('#add-to-cart-button-51').click();\ncy.wait(500); // wait for 2 seconds\ncy.get('#add-to-cart-button-51').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\n//\ncy.get(':nth-child(3) > .product-item > .picture').click();\ncy.get('#add-to-cart-button-52').click();\ncy.wait(500); // wait for 2 seconds\ncy.get('#add-to-cart-button-52').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\ncy.get(':nth-child(2) > .remove-from-cart > input').click();\ncy.get(':nth-child(3) > .remove-from-cart > input').click();\ncy.get('.update-cart-button').click();\n//\n//\n// VERIFICAR MENSAGEM DE CARRINHO VAZIO\ncy.wait(1000); // wait for 1 seconds\ncy.contains('Your Shopping Cart is empty!').should('be.visible');\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//HOME\ncy.get('.header-logo > a > img').click();\n//\n//\n//\n//",
+              "err": {},
+              "uuid": "c41c78bb-06e2-4fe9-a396-4561df548e26",
+              "parentUUID": "9bb771bc-c187-4b77-b36f-3ecf0cf344b0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c41c78bb-06e2-4fe9-a396-4561df548e26"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34917,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9d03e7bb-4af9-4f8c-9b37-4f7dba21344b",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "JEWELRY_WEB",
+              "fullTitle": "DEMO WEB SHOP JEWELRY_WEB",
+              "timedOut": null,
+              "duration": 64726,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//\n//JEWELRY - JÓIAS\ncy.get('.top-menu > :nth-child(6) > a').click();\n//\n//\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-71').click();\ncy.wait(3000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(2) > .product-item > .picture').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-14').click();\ncy.wait(3000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\n//\ncy.get('.header-logo > a > img').click();\n//\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\n//\ncy.get('.update-cart-button').click();\n//\n//\n// VERIFICAR MENSAGEM DE CARRINHO VAZIO\ncy.wait(1000); // wait for 1 seconds\ncy.contains('Your Shopping Cart is empty!').should('be.visible');\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\ncy.wait(2000); // wait for 2 seconds\ncy.contains('You have no items to compare.').should('be.visible');\ncy.wait(2000); // wait for 2 seconds\n//\n//HOME\ncy.get('.header-logo > a > img').click();",
+              "err": {},
+              "uuid": "95c875f3-f227-469b-aee3-ea6143febe8d",
+              "parentUUID": "9d03e7bb-4af9-4f8c-9b37-4f7dba21344b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "95c875f3-f227-469b-aee3-ea6143febe8d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 64726,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "40f30782-2923-40e3-b12f-645c3dd4a16b",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "PAGAMENTO DA JÓIA",
+              "fullTitle": "DEMO WEB SHOP PAGAMENTO DA JÓIA",
+              "timedOut": null,
+              "duration": 94695,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//JEWELRY - JÓIAS\ncy.get('.top-menu > :nth-child(6) > a').click();\n//\n//\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-71').click();\ncy.wait(3000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(2) > .product-item > .picture').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-14').click();\ncy.wait(3000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\n//\ncy.get('.header-logo > a > img').click();\n//\ncy.get('.ico-cart > .cart-label').click();\n//\ncy.get('.remove-from-cart > input').click();\n//\n//TERMO DE ACEITE\ncy.get('#termsofservice').click(); // Termo - I Agree\ncy.get('#checkout').click(); // Checkout\ncy.get('#Email').type('LLTEI@GMAIL.COM');\ncy.get('#Password').type('123456');\ncy.get('#RememberMe').click();\ncy.get('form > .buttons > .button-1').click();\n//\ncy.get('#termsofservice').click(); // Termo - I Agree\ncy.get('#checkout').click(); // Checkout\n//\n//\n//BOTÃO CONTINUAR\ncy.get('#billing-buttons-container > .button-1').click();\ncy.get('#shipping-buttons-container > .button-1').click();\ncy.get('#shippingoption_2').click();\ncy.get('#shipping-method-buttons-container > .button-1').click();\ncy.get('#paymentmethod_2').click();\n//\n//\n//Payment method\ncy.contains('Payment method').should('be.visible');\ncy.get('#paymentmethod_2').click();\ncy.get('#payment-method-buttons-container > .button-1').click();\n//\n//\n//Payment information\ncy.get('#CardholderName').type('José Filho');\ncy.get('#CardNumber').type('5405 1985 7437 5731');\ncy.get('#ExpireMonth').type('04');\ncy.get('#ExpireYear').type('2025');\ncy.get('#payment-info-buttons-container > .button-1').click();\n//\n//VERIFICANDO SE APARECE ERRO NO CARTÃO\ncy.contains('Wrong card code').should('be.visible');\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\n//\ncy.get('.update-cart-button').click();\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\n//\n//\n//HOME\ncy.get('.header-logo > a > img').click();\ncy.get('.ico-logout').click();\n//",
+              "err": {},
+              "uuid": "1914ec2d-7324-48e1-a0b0-e2e3fa325514",
+              "parentUUID": "40f30782-2923-40e3-b12f-645c3dd4a16b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1914ec2d-7324-48e1-a0b0-e2e3fa325514"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 94695,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

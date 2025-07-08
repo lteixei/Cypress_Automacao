@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-07-08T13:57:42.141Z",
+    "end": "2025-07-08T13:58:51.961Z",
+    "duration": 69820,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7daabefe-f2df-49d2-a754-18f30c17109e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\livraria.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\livraria.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7cf732c1-ab11-4a0b-91b7-665be73022d9",
+          "title": "Livraria da Travessa",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Novo Usuário",
+              "fullTitle": "Livraria da Travessa Novo Usuário",
+              "timedOut": null,
+              "duration": 65962,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//\n//BUSCA NO SITE     \ncy.get('#txtBusca').type('Contos Eróticos');\ncy.get('.busca-bar').click();\ncy.get('#gridBusca_ctl00_a_btnComprar').click();\ncy.get('#dgCarrinho_ctl02_lnkObjDesejo').click();\n//\n//TENTANDO LOGAR SEM SABER O LOGIN E A SENHA - USUÁRIO OU SENHA INVÁLIDOS    \ncy.get('#txtEmail2').type('lteixei@gmail.com');\ncy.get('#txtSenha').type('leolmt0406');\ncy.get('#btnLogar').click();\ncy.contains('Login inválido! ').should('be.visible');\n//\n//TESTANDO LOGAR COM E-MAIL DO GOOGLE - E-MAIL JÁ EXISTENTE\ncy.get('#btnCadastrar_1').click();\n//\ncy.get('#txtEmail').type('lteixei@gmail.com');\ncy.get('#btnCadastrarNovoCliente').click();\ncy.contains('E-mail já cadastrado!').should('be.visible');\ncy.get('#btnVoltar').click();\n//\n//TESTANDO LOGAR COM E-MAIL HOTMAIL - E-MAIL NÃO CADASTRADO\ncy.get('#btnCadastrar_1').click();\n//\ncy.get('#txtEmail').type('lteixei@hotmail.com');\ncy.get('#btnCadastrarNovoCliente').click();\ncy.contains('MINHA CONTA').should('be.visible');\n//\n//CADASTRANDO CONTA COM O E-MAIL LIBERADO\ncy.scrollTo(0, 800);\ncy.contains('ALTERAR DADOS DE CADASTRO');\ncy.get('#txtNome').type('Leonardo');\ncy.get('#txtApelido').type('leo');\ncy.get('#txtCPF').type('07158481786');\ncy.get('#ddlSexo').click;\ncy.get('#ddlSexo > option:nth-child(2)').click;\ncy.get('#txtDia').type('12101976');\ncy.get('#txtTelCelularDDD').type('21');\ncy.get('#txtSenha').type('leolmt0406');\ncy.get('#txtConfirmaSenha').type('leolmt0406');\ncy.get('#txtCep1').type('21341370');\ncy.get('#txtEndereco').type('Rua Comendador Pinto');\ncy.get('#txtNumero').type('516');\ncy.get('#lblComplemento').type('bloco 1 apt 401');\ncy.get('#txtBairro').type('Campinho');\ncy.get('#btnProsseguir').click();\n//\n//FICOU FALTANDO INSERIR O TELEFONE NO CADASTRO - CPF JÁ UTILIZADO\ncy.get('#txtTelCelular').type('964171960');\ncy.get('#txtTelResidencialDDD').type('21');\ncy.get('#txtTelResidencial').type('34491789');\ncy.get('#btnProsseguir').click();\n//\n//CLICANDO EM ESQUECI A SENHA E PEGANDO NO EMAIL    \ncy.get('.usuario').click();\ncy.get('.d-md-flex > .w-100 > .LoginStrore').click();\n//\ncy.get('#txtEmail2').type('lteixei@gmail.com');\ncy.get('#lnkCliqueAqui').click();\nAtenção: cy.contains('Você receberá um link para atualização da sua senha no e-mail: lteixei@gmail.com').should('be.visible');\n//\n//LOGAR AGORA COM EMAIL E SENHA CERTOS\ncy.get('#txtEmail2').type('lteixei@gmail.com');\ncy.get('#txtSenha').type('lmt0406');\ncy.get('#btnLogar').click();\ncy.contains('Minha Conta').should('be.visible');\n//\n//OBJETO DE DESEJO\ncy.get('#lnkObjDesejo').click();\ncy.get('[href=\"wpgObjDesejo.aspx?Tipo=1\"]').click();\n//cy.get('.col-3 > div.checkbox').check({ force: true }).should('be.checked')\ncy.scrollTo('bottom');\n//\n//FILMES E SHOWS \ncy.contains('DVDs por Segmento');\ncy.get(':nth-child(4) > ul > :nth-child(7) > a').click();\ncy.get('#dgLista_ctl06_lnkNomAutor').click({\n  force: true\n});\n//\n// SCROLL É ASSIM QUE SE USA\ncy.scrollTo(0, 800);\ncy.get('.catList > :nth-child(3)').click();\n//\ncy.scrollTo(0, 300);\ncy.get('#lnkComprar').click();\n//FRAME É ASSIM QUE SE USA    \n//cy.iframe('aut-iframe').find('#lnkComprar').click();\n//\ncy.scrollTo(0, 800);\ncy.get('nav > :nth-child(4) > ul > :nth-child(3) > a').click();\n//\ncy.scrollTo(0, 800);\ncy.get('#hlkMais2').click();\n//\ncy.scrollTo(0, 300);\ncy.get('#dlArtigosFiltrados_ctl03_wctArtigoMaisVendidosFull1_imgArtigo').click();\ncy.scrollTo(0, 300);\ncy.get('#lnkComprar').click();\n//\ncy.scrollTo(0, 1500);\ncy.get(':nth-child(4) > .cover');\n//\ncy.get('.home');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot set properties of null (setting 'innerText')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot set properties of null (setting 'innerText')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at IsNumeric (https://www.travessa.com.br/wpgCarrinhoCadastro.aspx?cad=S&email=lteixei@hotmail.com&TipoArtigo=1:1352:83)\n    at HTMLInputElement.onkeypress (https://www.travessa.com.br/wpgCarrinhoCadastro.aspx?cad=S&email=lteixei@hotmail.com&TipoArtigo=1:1:8)",
+                "diff": null
+              },
+              "uuid": "4a56c660-4098-4039-ba13-74550dfcbc90",
+              "parentUUID": "7cf732c1-ab11-4a0b-91b7-665be73022d9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4a56c660-4098-4039-ba13-74550dfcbc90"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 65962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-08T14:20:02.103Z",
+    "end": "2025-07-08T14:21:14.941Z",
+    "duration": 72838,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a966f4a0-4e64-42c5-9e7f-ac38e02e8f41",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Web_Shop\\payment_clean_cart_web_shop.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Web_Shop\\payment_clean_cart_web_shop.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b9c3617-62e6-468b-b94f-b698dbcce962",
+          "title": "DEMO WEB SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "PAGAMENTO DA JÓIA",
+              "fullTitle": "DEMO WEB SHOP PAGAMENTO DA JÓIA",
+              "timedOut": null,
+              "duration": 68772,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//\n//JEWELRY - JÓIAS\ncy.get('.top-menu > :nth-child(6) > a').click();\n//\n//\ncy.get(':nth-child(1) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-71').click();\ncy.wait(3000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(2) > .product-item > .picture').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('#add-to-cart-button-14').click();\ncy.wait(3000); // wait for 3 seconds\ncy.get(':nth-child(2) > [itemscope=\"\"] > a > span').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(3) > .product-item > .picture > a > img').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(4) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\ncy.wait(2000); // wait for 2 seconds\n//\n//\ncy.get(':nth-child(5) > .product-item > .picture > a > img').click();\ncy.get('.compare-products > .button-2').click();\ncy.wait(2000); // wait for 2 seconds\ncy.get('.top-menu > :nth-child(6) > a').click();\n//\ncy.get('.header-logo > a > img').click();\n//\ncy.get('.ico-cart > .cart-label').click();\n//\ncy.get('.remove-from-cart > input').click();\n//\n//TERMO DE ACEITE\ncy.get('#termsofservice').click(); // Termo - I Agree\ncy.get('#checkout').click(); // Checkout\ncy.get('#Email').type('LLTEI@GMAIL.COM');\ncy.get('#Password').type('123456');\ncy.get('#RememberMe').click();\ncy.get('form > .buttons > .button-1').click();\n//\ncy.get('#termsofservice').click(); // Termo - I Agree\ncy.get('#checkout').click(); // Checkout\n//\n//\n//BOTÃO CONTINUAR\ncy.get('#billing-buttons-container > .button-1').click();\ncy.get('#shipping-buttons-container > .button-1').click();\ncy.get('#shippingoption_2').click();\ncy.get('#shipping-method-buttons-container > .button-1').click();\ncy.get('#paymentmethod_2').click();\n//\n//\n//Payment method\ncy.contains('Payment method').should('be.visible');\ncy.get('#paymentmethod_2').click();\ncy.get('#payment-method-buttons-container > .button-1').click();\n//\n//\n//Payment information\ncy.get('#CardholderName').type('José Filho');\ncy.get('#CardNumber').type('5405 1985 7437 5731');\ncy.get('#ExpireMonth').type('04');\ncy.get('#ExpireYear').type('2025');\ncy.get('#payment-info-buttons-container > .button-1').click();\n//\n//VERIFICANDO SE APARECE ERRO NO CARTÃO\ncy.contains('Wrong card code').should('be.visible');\n//\n//LIMPAR CARRINHO PARA COMPRA\ncy.get('.ico-cart > .cart-label').click();\ncy.get(':nth-child(1) > .remove-from-cart > input').click();\n//\n//VISUALIZAR LISTA DE TODOS OS PRODUTOS EM FALTA\ncy.get('.customer-service > ul > :nth-child(5) > a').click();\n//\n//LIMPAR LISTA DOS PRODUTOS EM FALTA\ncy.get('.clear-list').click();\n//",
+              "err": {},
+              "uuid": "54420240-3355-4d27-bbc8-05ed1fc58d2e",
+              "parentUUID": "4b9c3617-62e6-468b-b94f-b698dbcce962",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54420240-3355-4d27-bbc8-05ed1fc58d2e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 68772,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
