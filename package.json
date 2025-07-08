@@ -18,7 +18,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "npm run test:run",
+    "test": "cypress run",
     "test:run": "cypress run",
     "merge:reports": "npx mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
     "generate:report": "npx marge mochawesome.json -f report -o mochawesome-report"
