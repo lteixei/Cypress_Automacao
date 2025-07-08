@@ -19,10 +19,22 @@
 //
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
+
 //
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import 'cypress-file-upload';
-import '@shelex/cypress-allure-plugin';  // Importa o plugin para Allure
-
+Cypress.Commands.add('iframe', { prevSubject: 'element' }, ($iframe, selector) => {
+    Cypress.log({
+      name: 'iframe',
+      consoleProps() {
+        return {
+          iframe: $iframe,
+        };
+      },
+    });
+    return new Cypress.Promise(resolve => {
+      resolve($iframe.contents().find(selector));
+      
+    });
+  });
