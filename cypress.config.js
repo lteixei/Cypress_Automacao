@@ -7,6 +7,6 @@ module.exports = defineConfig({
       allureWriter(on, config); // só o writer é necessário
       return config;
     },
-    baseUrl: 'http://localhost:3000', // ou sua base real
+    baseUrl: 'http://localhost:8081', // ou sua base real
   },
 });
