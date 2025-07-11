@@ -10,4 +10,7 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:8081', // ou sua base real
   },
+  env: {
+    allure: true,
+},
 });
