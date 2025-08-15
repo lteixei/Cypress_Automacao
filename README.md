@@ -36,10 +36,12 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 - ✅ (Opcional) Ambiente virtual com `nvm` para gerenciar versões Node
 
 ```bash
-# Verificar versões
+## Verificar versões
 node -v
 npm -v
 ```
+
+---
 
 ## 📦 Instalação
 ### Criar projeto Node
@@ -52,20 +54,24 @@ npm install cypress --save-dev
 npx cypress open
 O comando npx cypress open cria a estrutura inicial e abre a interface visual do Cypress.
 
+---
+
 ## 🏗 Estrutura de Projeto Recomendada
-📦 cypress-automation/
-├── 📁 cypress/
-│   ├── 📁 e2e/                # Testes end-to-end
-│   │   ├── login.cy.js
-│   │   └── cadastro.cy.js
-│   ├── 📁 fixtures/           # Dados de teste (JSON)
-│   │   └── users.json
-│   ├── 📁 support/            # Comandos customizados e hooks
-│   │   ├── commands.js
-│   │   └── e2e.js
-├── package.json
-├── cypress.config.js          # Configurações do Cypress
-└── README.md
+📦 cypress-automation/  
+├── 📁 cypress/  
+│   ├── 📁 e2e/                # Testes end-to-end  
+│   │   ├── login.cy.js  
+│   │   └── cadastro.cy.js  
+│   ├── 📁 fixtures/           # Dados de teste (JSON)  
+│   │   └── users.json  
+│   ├── 📁 support/            # Comandos customizados e hooks  
+│   │   ├── commands.js  
+│   │   └── e2e.js  
+├── package.json  
+├── cypress.config.js          # Configurações do Cypress  
+└── README.md  
+
+---
 
 ## ▶️ Executando os Testes
 ### Abrir Cypress em modo GUI
@@ -80,14 +86,16 @@ npx cypress run --browser chrome
 ### Executar apenas um teste específico
 npx cypress run --spec "cypress/e2e/login.cy.js"
 
+---
+
 ## ✅ Boas Práticas
 Dica	Explicação
-Separar testes por funcionalidades	Facilita manutenção e organização
-Utilizar fixtures para dados de teste	Evita hardcoding e facilita reutilização
-Criar comandos customizados	Reduz duplicação (cy.login(), cy.fillForm())
-Evitar cy.wait() fixo	Prefira cy.get().should() ou cy.intercept()
-Versionar configurações no cypress.config.js	Centraliza timeouts, baseUrl, viewport, etc
-Capturar screenshots e videos	Útil para debug e relatórios
+Separar testes por funcionalidades - Facilita manutenção e organização
+Utilizar fixtures para dados de teste - Evita hardcoding e facilita reutilização
+Criar comandos customizados - Reduz duplicação (cy.login(), cy.fillForm())
+Evitar cy.wait() fixo - Prefira cy.get().should() ou cy.intercept()
+Versionar configurações no cypress.config.js - Centraliza timeouts, baseUrl, viewport, etc
+Capturar screenshots e videos - Útil para debug e relatórios
 🔎 Exemplo de Teste Básico
 describe('Login', () => {
     beforeEach(() => {
@@ -102,19 +110,26 @@ describe('Login', () => {
     })
 })
 
+---
+
 ## 🔮 Funcionalidades Avançadas
 
-✅ Interceptação de requests: cy.intercept() para mockar APIs
-✅ Execução paralela em CI/CD para reduzir tempo de teste
-✅ Testes cross-browser (Chrome, Edge, Firefox)
-✅ Screenshots e gravação de vídeo automático (cypress.config.js)
-✅ Custom commands: comandos reutilizáveis e modulares
+✅ Interceptação de requests: cy.intercept() para mockar APIs  
+✅ Execução paralela em CI/CD para reduzir tempo de teste  
+✅ Testes cross-browser (Chrome, Edge, Firefox)  
+✅ Screenshots e gravação de vídeo automático (cypress.config.js)  
+✅ Custom commands: comandos reutilizáveis e modulares  
+
+---
 
 ## 🤝 Contribuição
 
-Contribuições são bem-vindas!
-Abra uma Issue ou envie um Pull Request com melhorias ou novos exemplos de teste.
+Contribuições são bem-vindas!  
+Abra uma Issue ou envie um Pull Request com melhorias ou novos exemplos de teste.  
+
+---
 
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
