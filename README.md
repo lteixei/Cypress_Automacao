@@ -8,11 +8,11 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 
 ## 🚀 Por que utilizar Cypress?
 
-- ✅ Arquitetura moderna e fácil de configurar
-- ✅ Execução **headless** e em modo **GUI** (navegador real)
-- ✅ Suporte nativo a **retries**, **mocks** e **stubs**
-- ✅ Relatórios claros e screenshots automáticas
-- ✅ Integração direta com CI/CD e GitHub Actions
+- ✅ Arquitetura moderna e fácil de configurar;  
+- ✅ Execução **headless** e em modo **GUI** (navegador real);  
+- ✅ Suporte nativo a **retries**, **mocks** e **stubs**;  
+- ✅ Relatórios claros e screenshots automáticas;  
+- ✅ Integração direta com CI/CD e GitHub Actions.
 
 ---
 
@@ -133,6 +133,7 @@ describe('Login', () => {
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
 
 
