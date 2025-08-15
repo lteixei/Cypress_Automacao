@@ -36,7 +36,7 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 - ✅ (Opcional) Ambiente virtual com `nvm` para gerenciar versões Node
 
 
-## Verificar versões
+### Verificar versões
 ```bash
 node -v
 npm -v
@@ -133,5 +133,6 @@ Abra uma Issue ou envie um Pull Request com melhorias ou novos exemplos de teste
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
 
