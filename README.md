@@ -39,19 +39,17 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 # Verificar versões
 node -v
 npm -v
-
+```
 
 ## 📦 Instalação
-# Criar projeto Node
+### Criar projeto Node
 npm init -y
 
-# Instalar Cypress
+### Instalar Cypress
 npm install cypress --save-dev
 
-# Abrir Cypress pela primeira vez
+### Abrir Cypress pela primeira vez
 npx cypress open
-
-
 O comando npx cypress open cria a estrutura inicial e abre a interface visual do Cypress.
 
 ## 🏗 Estrutura de Projeto Recomendada
@@ -70,16 +68,16 @@ O comando npx cypress open cria a estrutura inicial e abre a interface visual do
 └── README.md
 
 ## ▶️ Executando os Testes
-# Abrir Cypress em modo GUI
+### Abrir Cypress em modo GUI
 npx cypress open
 
-# Executar todos os testes em modo headless
+### Executar todos os testes em modo headless
 npx cypress run
 
-# Executar testes em um navegador específico
+### Executar testes em um navegador específico
 npx cypress run --browser chrome
 
-# Executar apenas um teste específico
+### Executar apenas um teste específico
 npx cypress run --spec "cypress/e2e/login.cy.js"
 
 ## ✅ Boas Práticas
@@ -118,4 +116,5 @@ Contribuições são bem-vindas!
 Abra uma Issue ou envie um Pull Request com melhorias ou novos exemplos de teste.
 
 ## 📄 Licença
+
 Este projeto está licenciado sob a MIT License.
