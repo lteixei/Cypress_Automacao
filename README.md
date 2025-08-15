@@ -37,7 +37,7 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 
 
 ### Verificar versões
-node -v
+node -v  
 npm -v
 
 ---
@@ -131,6 +131,7 @@ Abra uma Issue ou envie um Pull Request com melhorias ou novos exemplos de teste
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
 
 
