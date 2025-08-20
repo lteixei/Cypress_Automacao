@@ -44,13 +44,13 @@ npm -v
 
 ## 📦 Instalação
 ### Criar projeto Node
-npm init -y
+- npm init -y
 
 ### Instalar Cypress
-npm install cypress --save-dev
+- npm install cypress --save-dev
 
 ### Abrir Cypress pela primeira vez
-npx cypress open
+- npx cypress open
 O comando npx cypress open cria a estrutura inicial e abre a interface visual do Cypress.
 
 ---
@@ -74,20 +74,21 @@ O comando npx cypress open cria a estrutura inicial e abre a interface visual do
 
 ## ▶️ Executando os Testes
 ### Abrir Cypress em modo GUI
-npx cypress open
+- npx cypress open
 
 ### Executar todos os testes em modo headless
-npx cypress run
+- npx cypress run
 
 ### Executar testes em um navegador específico
-npx cypress run --browser chrome
+- npx cypress run --browser chrome
 
 ### Executar apenas um teste específico
-npx cypress run --spec "cypress/e2e/login.cy.js"
+- npx cypress run --spec "cypress/e2e/login.cy.js"
 
 ---
 
 ## ✅ Boas Práticas
+
 Dica	Explicação
 Separar testes por funcionalidades - Facilita manutenção e organização
 Utilizar fixtures para dados de teste - Evita hardcoding e facilita reutilização
@@ -95,7 +96,12 @@ Criar comandos customizados - Reduz duplicação (cy.login(), cy.fillForm())
 Evitar cy.wait() fixo - Prefira cy.get().should() ou cy.intercept()
 Versionar configurações no cypress.config.js - Centraliza timeouts, baseUrl, viewport, etc
 Capturar screenshots e videos - Útil para debug e relatórios
-🔎 Exemplo de Teste Básico
+
+---
+
+## 🔎 Exemplo de Teste Básico
+
+```bash
 describe('Login', () => {
     beforeEach(() => {
         cy.visit('https://exemplo.com/login')
@@ -108,7 +114,7 @@ describe('Login', () => {
         cy.contains('Bem-vindo').should('be.visible')
     })
 })
-
+```
 ---
 
 ## 🔮 Funcionalidades Avançadas
@@ -121,22 +127,33 @@ describe('Login', () => {
 
 ---
 
-## 🤝 Boas práticas para contribuições:  
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!  
+Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
+
+---
+
+## 🤝 Boas práticas para contribuições:
 
 📌 Escreva código limpo, legível e documentado.  
 📌 Teste suas mudanças antes de enviar o Pull Request.  
 📌 Mantenha a consistência com o estilo e padrões do projeto.  
-📌 Discuta melhorias ou dúvidas antes de implementar grandes mudanças.  
+📌 Discuta melhorias ou dúvidas antes de implementar grandes mudanças.
 
 ---
 
-## 📄 Licença
+## 👩‍💻 Contato
 
-Este projeto está licenciado sob a MIT License.
+- Informações	
+- Nome	Leonardo da Motta Teixeira  
+- Cargo	QA Engineer / Gestor / Tester-Sênior  
+- LinkedIn	www.linkedin.com/in/leonardo-da-motta-teixeira-3584734b  
+- E-mail	lteixei@hotmail.com  
 
+---
 
+## 📝 Licença
 
-
-
-
+- Este projeto está licenciado sob a MIT License.
 
