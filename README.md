@@ -18,18 +18,18 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 
 ## 🧰 Tecnologias Utilizadas
 
-| Ferramenta           | Descrição                                  |
+| Ferramenta           | Descrição                                 |
 |---------------------|--------------------------------------------|
-| Cypress             | Framework principal para testes web       |
-| Node.js             | Ambiente de execução necessário           |
+| Cypress             | Framework principal para testes web        |
+| Node.js             | Ambiente de execução necessário            |
 | npm / yarn          | Gerenciador de pacotes                     |
-| Mocha & Chai        | Framework de testes e assertions nativo   |
+| Mocha & Chai        | Framework de testes e assertions nativo    |
 | Faker.js / Chance.js| Geração de dados de teste aleatórios       |
 
 ---
 
-## ⚙️ Pré-requisitos
-
+## ⚙️ Pré-requisitos  
+  
 - ✅ Node.js v16 ou superior  
 - ✅ Git instalado  
 - ✅ Navegador Chrome ou Edge (Firefox também suportado)  
@@ -37,8 +37,8 @@ O objetivo é fornecer uma referência completa para criar, organizar e executar
 
 
 ### Verificar versões
-node -v  
-npm -v
+- node -v  
+- npm -v
 
 ---
 
@@ -89,13 +89,14 @@ O comando npx cypress open cria a estrutura inicial e abre a interface visual do
 
 ## ✅ Boas Práticas
 
-Dica	Explicação
-Separar testes por funcionalidades - Facilita manutenção e organização
-Utilizar fixtures para dados de teste - Evita hardcoding e facilita reutilização
-Criar comandos customizados - Reduz duplicação (cy.login(), cy.fillForm())
-Evitar cy.wait() fixo - Prefira cy.get().should() ou cy.intercept()
-Versionar configurações no cypress.config.js - Centraliza timeouts, baseUrl, viewport, etc
-Capturar screenshots e videos - Útil para debug e relatórios
+| Dica          ------------------------------------ | Explicação                                      |
+|----------------------------------------------------|-------------------------------------------------|
+| Separar testes por funcionalidades                 | Facilita manutenção e organização               |
+| Utilizar fixtures para dados de teste              | Evita hardcoding e facilita reutilização        |
+| Criar comandos customizados                        | Reduz duplicação (cy.login(), cy.fillForm())    |
+| Evitar cy.wait() fixo                              | Prefira cy.get().should() ou cy.intercept()     |
+| Versionar configurações no cypress.config.js       | Centraliza timeouts, baseUrl, viewport, etc     |
+| Capturar screenshots e videos                      | Útil para debug e relatórios                    |
 
 ---
 
@@ -156,4 +157,5 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📝 Licença
 
 - Este projeto está licenciado sob a MIT License.
+
 
