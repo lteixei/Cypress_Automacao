@@ -89,7 +89,7 @@ O comando npx cypress open cria a estrutura inicial e abre a interface visual do
 
 ## ✅ Boas Práticas
 
-| Dica          ------------------------------------ | Explicação                                      |
+| Dica                                               | Explicação                                      |
 |----------------------------------------------------|-------------------------------------------------|
 | Separar testes por funcionalidades                 | Facilita manutenção e organização               |
 | Utilizar fixtures para dados de teste              | Evita hardcoding e facilita reutilização        |
@@ -157,5 +157,6 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📝 Licença
 
 - Este projeto está licenciado sob a MIT License.
+
 
 
