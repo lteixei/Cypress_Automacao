@@ -18,19 +18,19 @@
     "lib": "lib"
   },
   "scripts": {
-  "test:run": "npx cypress run",
-  "merge:reports": "npx mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
-  "generate:report": "npx marge mochawesome.json -f report -o mochawesome-report",
-  "allure:generate": "npx allure generate allure-results --clean -o allure-report",
-  "allure:open": "allure open allure-report",
-  "test:report": "npm run test && npm run allure:generate && npm run allure:open",
-  "allure:run": "set CYPRESS_ALLURE=true && cypress run --browser chrome",
-  "allure:clea": "rm -r allure-results/ allure-report cypress/screenshots true"
-},
+    "test:run": "npx cypress run",
+    "merge:reports": "npx mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
+    "generate:report": "npx marge mochawesome.json -f report -o mochawesome-report",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "test:report": "npm run test && npm run allure:generate && npm run allure:open",
+    "allure:run": "set CYPRESS_ALLURE=true && cypress run --browser chrome",
+    "allure:clea": "rm -r allure-results/ allure-report cypress/screenshots true"
+  },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "allure-commandline": "^2.34.1",
-    "cypress": "^14.5.1",
+    "cypress": "^15.0.0",
     "cypress-iframe": "^1.0.1",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.0",
