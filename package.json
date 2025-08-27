@@ -1,39 +1,19 @@
 {
-  "name": "automacao_selenium_origin",
+  "name": "Cypress_Automacao",
   "version": "1.0.0",
-  "description": "Automação de testes com Selenium",
-  "homepage": "https://github.com/lteixei/Automacao_Selenium_Origin#readme",
-  "bugs": {
-    "url": "https://github.com/lteixei/Automacao_Selenium_Origin/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lteixei/Automacao_Selenium_Origin.git"
-  },
-  "license": "ISC",
-  "author": "Leonardo Teixeira",
-  "type": "commonjs",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "Automação com Cypress para o site Automation Exercise",
   "scripts": {
-    "test:run": "npx cypress run",
-    "merge:reports": "npx mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
-    "generate:report": "npx marge mochawesome.json -f report -o mochawesome-report",
-    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
-    "allure:open": "allure open allure-report",
-    "test:report": "npm run test && npm run allure:generate && npm run allure:open",
-    "allure:run": "set CYPRESS_ALLURE=true && cypress run --browser chrome",
-    "allure:clea": "rm -r allure-results/ allure-report cypress/screenshots true"
+    "test": "npx cypress run --headless --spec cypress/integration/*.spec.js --browser chrome",
+    "generate:allure": "allure generate cypress/allure-results --clean -o cypress/allure-report",
+    "open:allure": "allure open cypress/allure-report"
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.41.2",
-    "allure-commandline": "^2.34.1",
+    "allure-commandline": "^2.13.8",
     "cypress": "^15.0.0",
-    "cypress-iframe": "^1.0.1",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^6.2.0"
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "cypress-iframe": "^1.0.1"
   }
 }

@@ -1,10 +1,18 @@
-// Importando o defineConfig do Cypress
 const { defineConfig } = require('cypress');
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   e2e: {
-    // Configuração dos arquivos de teste
-    specPattern: 'cypress/integration/**/*.spec.js',  // Caminho correto para os testes
-    baseUrl: 'http://localhost:8081', // Base URL, altere conforme necessário
+    setupNodeEvents(on, config) {
+      allureWriter(on, config);
+      return config;
+    },
+    baseUrl: 'https://automationexercise.com', // 👈 Adicione esta linha
+    specPattern: 'cypress/integration/**/*.spec.js',
+    supportFile: 'cypress/support/e2e.js',
+  },
+  env: {
+    allure: true,
+    allureResultsPath: 'allure-results',
   },
 });

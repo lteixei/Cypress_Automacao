@@ -1,0 +1,11 @@
+{
+  "integrationFolder": "cypress/integration",
+  "testFiles": "**/*.spec.js",  // Define que o Cypress deve procurar arquivos .spec.js
+  "video": true,
+  "screenshotOnRunFailure": true,
+  "reporter": "@shelex/cypress-allure-plugin",
+  "reporterOptions": {
+    "resultDir": "cypress/allure-results"
+  }
+}
+

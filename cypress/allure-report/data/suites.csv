@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","62324","Deve acessar o site www.globo.com","","Fri Aug 22 11:58:21 BRT 2025","failed","Fri Aug 22 11:59:24 BRT 2025","","Teste Simples no Site da Globo","",""
+"","3","Deve realizar o upload do arquivo 90.jpg","","Fri Aug 22 11:59:38 BRT 2025","broken","Fri Aug 22 11:59:38 BRT 2025","","CY0019 File Upload Test","",""
+"","","Oops...we found an error preparing this test file: file_upload_test.spec.js","","","broken","","","file_upload_test.spec.js","",""
